@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Content for Forms.
+{% endblock %}
+
+{% block Content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
